@@ -7,17 +7,19 @@
     <title>Document</title>
   </head>
   <body>
-    <form>
+    <form id="job-search">
       <!--enter a job key word-->
       <label for="jtitle">Job Title</label>
-      <input type="text" id="jtitle" name="jtitle" required />
+      <input type="text" id="jtitle" name="jtitle" />
 
       <!--enter a location key word-->
-      <label for="location">Job Title</label>
-      <input type="text" id="location" name="location" required />
+      <label for="location">Location</label>
+      <input type="text" id="location" name="location" />
 
       <!--submit form-->
       <input type="submit" value="search" />
     </form>
+    <div id="job-card-container"></div>
+    <script src="jobsfinder.js"></script>
   </body>
 </html>
