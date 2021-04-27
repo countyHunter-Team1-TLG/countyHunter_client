@@ -1,51 +1,37 @@
 document.getElementById("home-search").addEventListener("submit", searchHomes);
 
 //handle search button click
-function searchHomes(e){
-    e.preventDefault();
-    
-    const formAddress = e.target.sAddie
-    const formCity = e.target.city
-    const formState = e.target.city
+function searchHomes(e) {
+  e.preventDefault();
 
-    const URL = ``;
+  const formAddress = e.target.address;
+  const formCity = e.target.city;
+  const formState = e.target.state;
+
+  const URL = `${formAddress}  ${formCity} ${formState}`;
 
   fetch(URL)
     .then((res) => res.json())
     .then((json) => displayFoundHomes(json));
-
 }
 
 //handle displaying of found homes
-function displayFoundHomes(){
-    const addTo = document.getElementById("home-card-container");
-    const homeCard = document.getElementById("home-card-container");
-    //create cards
-    data.foreach((element) => {
+function displayFoundHomes(data) {
+  document.getElementById("address").innerHTML = data[0].address;
+  document.getElementById("city").innerHTML = data[0].city;
+  document.getElementById("houseimg").setAttribute("src", data[0].img_url);
+  document.getElementById("homeinfo").innerHTML = data[0].description;
 
-        let saddress = document.createElement("h2");
-        saddress.innerHTML = element.address
+  //rest of the homes
+  const addTo = document.getElementById("hlink-list");
+  //create links to display homes on the side bar
+  for (let i = 1; i < data.length; i++) {
+    let houselistItem = document.createElement("li");
+    let a = document.createElement("a");
+    a.setAttribute("href", data.img_url);
+    a.innerHTML = data.address + ";" + data.city;
+    houselistItem.appendChild(a);
 
-        let scity = document.createElement("p");
-        scity.innerHTML = element.city;
-
-        let sstate = document.createElement("p");
-        sstate.innerHTML = element.state
-
-        let simg = document.createElement("img");
-        simg.src = element.url
-
-        let callForInfo = document.createElement("p")
-        callForInfo.innerHTML = element.phone;
-
-        //append items to card
-        homeCard.appendChild(saddress);
-        homeCard.appendChild(scity);
-        homeCard.appendChild(sstate);
-        homeCard.appendChild(simg);
-        homeCard.appendChild(callForInfo);
-
-        //append card to html page
-        addTo.appendChild(homeCard);
-    })
+    addTo.appendChild(joblistItem);
+  }
 }

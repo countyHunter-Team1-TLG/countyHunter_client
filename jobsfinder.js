@@ -25,7 +25,7 @@ function displayFoundJobs(data) {
   document.getElementById("job-title").innerHTML = data[0].description;
 
   //rest of the jobs
-  const addTo = document.getElementById("link-list");
+  const addTo = document.getElementById("jlink-list");
   //create links to display jobs on the side bar
 
   for (let i = 1; i < data.length; i++) {
