@@ -1,5 +1,6 @@
 document.getElementById("job-search").addEventListener("submit", searchJobs);
 
+
 //handle search button click
 function searchJobs(e) {
   e.preventDefault();
@@ -31,7 +32,16 @@ function displayFoundJobs(data) {
   for (let i = 1; i < data.length; i++) {
     let joblistItem = document.createElement("li");
     let a = document.createElement("a");
-    a.setAttribute("href", data.url);
+     a.setAttribute("onclick",  ()=> {
+                //onclick change the main display
+        document.getElementById("job-title").innerHTML = data[i].title;
+        document.getElementById("company").innerHTML = data[i].company;
+        document
+                .getElementById("company-logo")
+                .setAttribute("src", data[i].company_logo);
+        document.getElementById("job-title").innerHTML = data[i].description;
+
+     });
     a.innerHTML = data.company + ";" + data.title;
     joblistItem.appendChild(a);
 
