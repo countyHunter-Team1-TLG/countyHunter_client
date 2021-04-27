@@ -32,6 +32,7 @@ function displayFoundJobs(data) {
   for (let i = 1; i < data.length; i++) {
     let joblistItem = document.createElement("li");
     let a = document.createElement("a");
+    a.innerHTML = data.company + ";" + data.title;
      a.setAttribute("onclick",  ()=> {
                 //onclick change the main display
         document.getElementById("job-title").innerHTML = data[i].title;
@@ -42,7 +43,7 @@ function displayFoundJobs(data) {
         document.getElementById("job-title").innerHTML = data[i].description;
 
      });
-    a.innerHTML = data.company + ";" + data.title;
+    
     joblistItem.appendChild(a);
 
     addTo.appendChild(joblistItem);

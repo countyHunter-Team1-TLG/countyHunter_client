@@ -28,17 +28,15 @@ function displayFoundHomes(data) {
   for (let i = 1; i < data.length; i++) {
     let houselistItem = document.createElement("li");
     let a = document.createElement("a");
-    a.setAttribute("onclick", ()=> {
-        //onclick change the main display
-document.getElementById("address").innerHTML = data[i].address;
-document.getElementById("city").innerHTML = data[i].city;
-document
-        .getElementById("houseimg")
-        .setAttribute("src", data[i].img_url);
-document.getElementById("homeinfo").innerHTML = data[i].description;
-
-});
     a.innerHTML = data.address + ";" + data.city;
+    a.setAttribute("onclick", () => {
+      //onclick change the main display
+      document.getElementById("address").innerHTML = data[i].address;
+      document.getElementById("city").innerHTML = data[i].city;
+      document.getElementById("houseimg").setAttribute("src", data[i].img_url);
+      document.getElementById("homeinfo").innerHTML = data[i].description;
+    });
+
     houselistItem.appendChild(a);
 
     addTo.appendChild(joblistItem);
