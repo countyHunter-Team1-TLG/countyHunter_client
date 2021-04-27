@@ -4,8 +4,8 @@ document.getElementById("job-search").addEventListener("submit", searchJobs);
 function searchJobs(e) {
   e.preventDefault();
 
-  const searchJob = e.target.jtitle.value;
-  const jobLocation = e.target.location.value;
+  const searchJob = e.target.jobname.value;
+  const jobLocation = e.target.city.value;
 
   const URL = `https://jobs.github.com/positions?description=${searchJob}&location=${jobLocation}`;
 
@@ -16,43 +16,25 @@ function searchJobs(e) {
 
 //handle displaying of found jobs
 function displayFoundJobs(data) {
+  //first job
+  document.getElementById("job-title").innerHTML = data[0].title;
+  document.getElementById("company").innerHTML = data[0].company;
+  document
+    .getElementById("company-logo")
+    .setAttribute("src", data[0].company_logo);
+  document.getElementById("job-title").innerHTML = data[0].description;
 
-document.getElementById("job-title").innerHTML = data[0].title;
-document.getElementById("company").innerHTML = data[0].company;
-document.getElementById("company-logo").setAttribute("src", data[0].company_logo);
-document.getElementById("job-title").innerHTML = data[0].description;
+  //rest of the jobs
+  const addTo = document.getElementById("link-list");
+  //create links to display jobs on the side bar
 
+  for (let i = 1; i < data.length; i++) {
+    let joblistItem = document.createElement("li");
+    let a = document.createElement("a");
+    a.setAttribute("href", data.url);
+    a.innerHTML = data.company + ";" + data.title;
+    joblistItem.appendChild(a);
 
-
-
-//   const addTo = document.getElementById("job-card-container");
-//   //create cards
-//   let jobCard = document.createElement("div");
-//   data.foreach((element) => {
-//     //job title
-//     let jobTile = document.createElement("h2");
-//     jobTile.innerHTML = element.title;
-//     //company name
-//     let companyName = document.createElement("h3");
-//     companyName.innerHTML = element.company;
-//     //job description
-//     let jobDescription = document.createElement("p");
-//     jobDescription.innerHTML = element.description;
-//     //url to apply to job
-//     let urlLink = element.url;
-//     let toJob = `window.location.href='${urlLink}';`;
-//     //button to go to job post
-//     let apply = document.createElement("button");
-//     apply.setAttribute("onclick", toJob);
-//     apply.innerHTML = "apply";
-
-//     //append to card
-//     jobCard.appendChild(jobTile);
-//     jobCard.appendChild(companyName);
-//     jobCard.appendChild(jobDescription);
-//     jobCard.appendChild(apply);
-
-//     //append card to html page
-//     addTo.appendChild(jobCard);
-//   });
+    addTo.appendChild(joblistItem);
+  }
 }
