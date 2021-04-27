@@ -11,13 +11,14 @@ function searchJobs(e) {
 
   fetch(URL)
     .then((res) => res.json())
-    .then((json) => console.log(json));
+    .then((json) => displayFoundJobs(json));
 }
 
 //handle displaying of found jobs
 function displayFoundJobs(data){
     const addTo = document.getElementById("job-card-container");
     //create cards
+    let jobCard = document.createElement("div");
     data.foreach((element) => {
             //job title
     let jobTile = document.createElement("h2");
@@ -34,6 +35,15 @@ function displayFoundJobs(data){
             //button to go to job post
      let apply = document.createElement("button");
      apply.setAttribute("onclick", toJob);
-     but.innerHTML = "apply";
+     apply.innerHTML = "apply";
+
+     //append to card
+    jobCard.appendChild(jobTile);
+    jobCard.appendChild(companyName);
+    jobCard.appendChild(jobDescription);
+    jobCard.appendChild(apply);
+
+    //append card to html page
+    addTo.appendChild(jobCard);
     })
 }
