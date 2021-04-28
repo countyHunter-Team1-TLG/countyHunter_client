@@ -73,3 +73,9 @@ function changedisplay(data) {
     .setAttribute("src", data.company_logo);
   document.getElementById("description").innerHTML = data.description;
 }
+
+/*
+*   HERE WILL BE CODE THAT I MAY NEED LATER
+
+HTML CODE:  src="https://www.thetravelmagazine.net/wp-content/uploads/World-Wonders-Tour-Image.jpg"
+*/
