@@ -52,27 +52,6 @@ function displayFoundJobs(data) {
 
     document.getElementById("list-settings-list").innerHTML = data[4].company;
     document.getElementById("list-settings").innerHTML = data[4].title;
-
-    //create links to display jobs on the side bar
-
-    // for (let i = 1; i < data.length; i++) {
-    //   let joblistItem = document.createElement("li");
-    //   let a = document.createElement("p");
-    //   let sameLine = document.createElement("span");
-    //   let liButton = document.createElement("button");
-    //   a.innerHTML = data[i].company + ";" + data[i].title;
-    //   liButton.innerHTML = "more\ninfo";
-
-    //   //ISSUE HERE
-    //   // liButton.setAttribute("onclick", function change() {
-    //   //   changedisplay(data[i]);
-    //   // });
-
-    //   sameLine.appendChild(liButton);
-    //   joblistItem.appendChild(a);
-    //   joblistItem.appendChild(sameLine);
-    //   addTo.appendChild(joblistItem);
-    // }
   }
 }
 function changedisplay(data) {
