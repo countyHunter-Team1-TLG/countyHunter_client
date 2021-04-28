@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>County Hunter</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- Logo -->
+    <div class="bg-secondary p-5 text-center m-3">
+      <h1 class="display-4">
+        <a href="index.html" id="logo">County Hunter</a>
+      </h1>
+    </div>
+    <!-- Nav -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">County Hunter</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarScroll"
+          aria-controls="navbarScroll"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul
+            class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+            style="--bs-scroll-height: 100px"
+          >
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="./Htmls/house-finder.html"
+                >House Finder</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="./Htmls/job-finder.html"
+                >Job Finder</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link active dropdown-toggle"
+                href="#"
+                id="navbarScrollingDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                About Us
+              </a>
+              <ul
+                class="dropdown-menu"
+                aria-labelledby="navbarScrollingDropdown"
+              >
+                <li><a class="dropdown-item" href="#">Mission Statement</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Upcoming Improvements</a>
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="./Htmls/about-us.html"
+                    >The Team</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main -->
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-7 col-12-narrower">
+            <div id="content">
+              <!-- Content -->
+
+              <article>
+                <header>
+                  <h2 id="job-title">Job Title</h2>
+                  <p id="company">company information</p>
+                </header>
+
+                <form id="job-search">
+                  <div class="form-group">
+                    <div class="form-control col-6 col-12-mobilep">
+                      <input
+                        type="text"
+                        name="jobname"
+                        id="jobname"
+                        placeholder="Job Name"
+                      />
+                      <input
+                        type="text"
+                        name="city"
+                        id="city"
+                        placeholder="City"
+                      />
+
+                      <input type="submit" class="button alt" value="Search" />
+                    </div>
+                  </div>
+                </form>
+
+                <div class="card m-3" style="width: 100%">
+                  <img
+                    src="https://www.thetravelmagazine.net/wp-content/uploads/World-Wonders-Tour-Image.jpg"
+                    style="width: 90%"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text" id="homeinfo">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's contentpurus. Praesent
+                      mattis, enim quis hendrerit porttitor, sapien tortor
+                      viverra magna, sit amet rhoncus nisl lacus nec arcu.
+                      Suspendisse laoreet metus ut metus imperdiet interdum
+                      aliquam justo tincidunt. Mauris dolor urna, fringilla vel
+                      malesuada ac, dignissim eu mi. Praesent mollis massa ac
+                      nulla pretium pretium. Maecenas tortor mauris, consectetur
+                      pellentesque dapibus eget, tincidunt vitae arcu.
+                      Vestibulum purus augue, tincidunt sit amet iaculis id,
+                      porta eu purus.
+                    </p>
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li
+                      class="list-group-item btn"
+                      data-bs-toggle="collapse"
+                      href="#multiCollapseExample1"
+                      role="button"
+                      aria-expanded="false"
+                      aria-controls="multiCollapseExample1"
+                    >
+                      An item
+                    </li>
+                    <div class="col">
+                      <div
+                        class="collapse multi-collapse"
+                        id="multiCollapseExample1"
+                      >
+                        <div class="card card-body">
+                          Some placeholder content for the first collapse
+                          component of this multi-collapse example. This panel
+                          is hidden by default but revealed when the user
+                          activates the relevant trigger.
+                        </div>
+                      </div>
+                    </div>
+                    <li
+                      class="list-group-item btn"
+                      data-bs-toggle="collapse"
+                      href="#multiCollapseExample2"
+                      role="button"
+                      aria-expanded="false"
+                      aria-controls="multiCollapseExample2"
+                    >
+                      A second item
+                    </li>
+                    <div class="col">
+                      <div
+                        class="collapse multi-collapse"
+                        id="multiCollapseExample2"
+                      >
+                        <div class="card card-body">
+                          Some placeholder content for the first collapse
+                          component of this multi-collapse example. This panel
+                          is hidden by default but revealed when the user
+                          activates the relevant trigger.
+                        </div>
+                      </div>
+                    </div>
+                    <li
+                      class="list-group-item btn"
+                      data-bs-toggle="collapse"
+                      href="#multiCollapseExample3"
+                      role="button"
+                      aria-expanded="false"
+                      aria-controls="multiCollapseExample3"
+                    >
+                      A third item
+                    </li>
+                    <div class="col">
+                      <div
+                        class="collapse multi-collapse"
+                        id="multiCollapseExample3"
+                      >
+                        <div class="card card-body">
+                          Some placeholder content for the first collapse
+                          component of this multi-collapse example. This panel
+                          is hidden by default but revealed when the user
+                          activates the relevant trigger.
+                        </div>
+                      </div>
+                    </div>
+                  </ul>
+                  <div class="card-body" id="favorite_apply">
+                    <a href="./job-finder.html" class="card-link"
+                      >Back to Search</a
+                    >
+                    <a href="#" class="card-link">Apply Here</a>
+                  </div>
+                </div>
+                <br />
+                <br />
+                <br />
+              </article>
+            </div>
+          </div>
+          <div class="col-5 col-12-narrower">
+            <div id="sidebar">
+              <!-- Sidebar -->
+              <div class="row">
+                <div class="col-4">
+                  <div
+                    class="list-group"
+                    id="list-tab hlink-list"
+                    role="tablist"
+                  >
+                    <a
+                      class="list-group-item list-group-item-action active"
+                      id="list-home-list"
+                      data-bs-toggle="list"
+                      href="#list-home"
+                      role="tab"
+                      aria-controls="home"
+                      >Job 1</a
+                    >
+                    <a
+                      class="list-group-item list-group-item-action"
+                      id="list-profile-list"
+                      data-bs-toggle="list"
+                      href="#list-profile"
+                      role="tab"
+                      aria-controls="profile"
+                      >Job 2
+                    </a>
+                    <a
+                      class="list-group-item list-group-item-action"
+                      id="list-messages-list"
+                      data-bs-toggle="list"
+                      href="#list-messages"
+                      role="tab"
+                      aria-controls="messages"
+                      >Job 3</a
+                    >
+                    <a
+                      class="list-group-item list-group-item-action"
+                      id="list-settings-list"
+                      data-bs-toggle="list"
+                      href="#list-settings"
+                      role="tab"
+                      aria-controls="settings"
+                      >Job 4</a
+                    >
+                  </div>
+                </div>
+                <div class="col-8">
+                  <div class="tab-content" id="nav-tabContent">
+                    <div
+                      class="tab-pane fade show active"
+                      id="list-home"
+                      role="tabpanel"
+                      aria-labelledby="list-home-list"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Enim deleniti nobis blanditiis cupiditate officiis
+                      voluptatem ab magnam distinctio, similique eius quis,
+                      minus cumque? Corrupti cupiditate corporis eius sint eum
+                      quae?
+                    </div>
+                    <div
+                      class="tab-pane fade"
+                      id="list-profile"
+                      role="tabpanel"
+                      aria-labelledby="list-profile-list"
+                    >
+                      similique eius quis, minus cumque? Corrupti cupiditate
+                      corporis eius sint eum quae?
+                    </div>
+                    <div
+                      class="tab-pane fade"
+                      id="list-messages"
+                      role="tabpanel"
+                      aria-labelledby="list-messages-list"
+                    >
+                      Enim deleniti nobis blanditiis cupiditate officiis
+                      voluptatem ab magnam distinctio, similique eius quis,
+                      minus cumque? Corrupti cupiditate corporis eius sint eum
+                      quae?
+                    </div>
+                    <div
+                      class="tab-pane fade"
+                      id="list-settings"
+                      role="tabpanel"
+                      aria-labelledby="list-settings-list"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <section>
+                <footer>
+                  <a href="../index.html" class="button">View Favorites</a>
+                </footer>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer">
+      <div class="container">
+        <div class="row">
+          <section class="col-3 col-6-narrower col-12-mobilep">
+            <h3>More Links to Stuff</h3>
+            <ul class="links">
+              <li><a href="#">Duis neque nisi dapibus</a></li>
+              <li><a href="#">Sed et dapibus quis</a></li>
+              <li><a href="#">Rutrum accumsan sed</a></li>
+              <li><a href="#">Mattis et sed accumsan</a></li>
+              <li><a href="#">Duis neque nisi sed</a></li>
+              <li><a href="#">Sed et dapibus quis</a></li>
+              <li><a href="#">Rutrum amet varius</a></li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="../homeFinder.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
