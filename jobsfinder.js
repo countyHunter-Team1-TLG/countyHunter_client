@@ -4,8 +4,8 @@ document.getElementById("job-search").addEventListener("submit", searchJobs);
 function searchJobs(e) {
   e.preventDefault();
 
-  const searchJob = e.target.jobname.value;
-  const jobLocation = e.target.city.value;
+  const searchJob = e.target.inputTechnology.value;
+  const jobLocation = e.target.inputCity.value;
 
   //   const URLOLD = `https://jobs.github.com/positions?description=${searchJob}&location=${jobLocation}`;
 
