@@ -52,9 +52,7 @@ function displayFoundJobs(data) {
       liButton.innerHTML = "more\ninfo";
 
       //ISSUE HERE
-      // liButton.setAttribute("onclick", function change() {
-      //   changedisplay(data[i]);
-      // });
+      liButton.setAttribute("onclick", changedisplay);
 
       sameLine.appendChild(liButton);
       joblistItem.appendChild(a);
