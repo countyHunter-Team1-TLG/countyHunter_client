@@ -100,396 +100,144 @@
 
     <!-- Main -->
     <section>
-      <div class="container">
+      <div class="container-fluid text-center">
+        <header>
+          <h2>Favorites</h2>
+          <p>Keep track of your favorite jobs and houses</p>
+        </header>
+        <form class="row g-4 d-flex align-items-end justify-content-center mb-5">
+          <div class="col-6">
+            <label for="inputAddress" class="form-label">Address</label>
+            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+          </div>
+          <div class="col-md-2">
+            <label for="inputCity" class="form-label">City</label>
+            <input type="text" class="form-control" id="inputCity">
+          </div>
+          <div class="col-md-2">
+            <label for="inputState" class="form-label">State</label>
+            <select id="inputState" class="form-select">
+              <option selected>State</option>
+              <option value="Alabama">Alabama - AL</option>
+              <option value="Alaska">Alaska - AK</option>
+              <option value="Arizona">Arizona - AZ</option>
+              <option value="Arkansas">Arkansas - AR</option>
+              <option value="California">California - CA</option>
+              <option value="Colorado">Colorado - CO</option>
+              <option value="Connecticut">Connecticut - CT</option>
+              <option value="Delaware">Delaware - DE</option>
+              <option value="Florida">Florida - FL</option>
+              <option value="Georgia">Georgia - GA</option>
+              <option value="Hawaii">Hawaii - HI</option>
+              <option value="Idaho">Idaho - ID</option>
+              <option value="Illinois">Illinois - IL</option>
+              <option value="Indiana">Indiana - IN</option>
+              <option value="Iowa">Iowa - IA</option>
+              <option value="Kansas">Kansas - KS</option>
+              <option value="Kentucky">Kentucky - KY</option>
+              <option value="Louisiana">Louisiana - LA</option>
+              <option value="Maine">Maine - ME</option>
+              <option value="Maryland">Maryland - MD</option>
+              <option value="Massachusetts">
+                Massachusetts - MA
+              </option>
+              <option value="Michigan">Michigan - MI</option>
+              <option value="Minnesota">Minnesota - MN</option>
+              <option value="Mississippi">Mississippi - MS</option>
+              <option value="Missouri">Missouri - MO</option>
+              <option value="Montana">Montana - MT</option>
+              <option value="Nebraska">Nebraska - NE</option>
+              <option value="Nevada">Nevada - NV</option>
+              <option value="New Hampshire">
+                New Hampshire - NH
+              </option>
+              <option value="New Jersey">New Jersey - NJ</option>
+              <option value="New Mexico">New Mexico - NM</option>
+              <option value="New York">New York - NY</option>
+              <option value="North Carolina">
+                North Carolina - NC
+              </option>
+              <option value="North Dakota">North Dakota - ND</option>
+              <option value="Ohio">Ohio - OH</option>
+              <option value="Oklahoma">Oklahoma - OK</option>
+              <option value="Oregon">Oregon - OR</option>
+              <option value="Pennsylvania">Pennsylvania - PA</option>
+              <option value="Rhode Island">Rhode Island - RI</option>
+              <option value="South Carolina">
+                South Carolina - SC
+              </option>
+              <option value="South Dakota">South Dakota - SD</option>
+              <option value="Tennessee">Tennessee - TN</option>
+              <option value="Texas">Texas - TX</option>
+              <option value="Utah">Utah - UT</option>
+              <option value="Vermont">Vermont - VT</option>
+              <option value="Virginia">Virginia - VA</option>
+              <option value="Washington">Washington - WA</option>
+              <option value="West Virginia">
+                West Virginia - WV
+              </option>
+              <option value="Wisconsin">Wisconsin - WI</option>
+              <option value="Wyoming">Wyoming - WY</option>
+            </select>
+          </div>
+          <div class="col-md-1">
+            <label for="inputZip" class="form-label">Zip</label>
+            <input type="text" class="form-control" id="inputZip">
+          </div>
+          <div class="col-md-1 h-50">
+            <button type="submit" class="btn btn-primary">Search</button>
+          </div>
+        </form>
         <div class="row">
           <div class="col-7 col-12-narrower">
             <div id="content">
+             
               <!-- Content -->
-
               <article>
-                <header>
-                  <h2>Home or Job Title</h2>
-                  <p>Content left, List right. Brief description</p>
-                </header>
-
-                <form>
-                  <div class="form-group">
-                    <div class="form-control col-6 col-12-mobilep">
-                      <input
-                        type="text"
-                        name="address"
-                        id="address"
-                        placeholder="ADDRESS"
-                      />
-                      <input
-                        type="text"
-                        name="city"
-                        id="city"
-                        placeholder="CITY"
-                      />
-                      <select name="state" id="state">
-                        <option selected>State</option>
-                        <option value="Alabama">Alabama - AL</option>
-                        <option value="Alaska">Alaska - AK</option>
-                        <option value="Arizona">Arizona - AZ</option>
-                        <option value="Arkansas">Arkansas - AR</option>
-                        <option value="California">California - CA</option>
-                        <option value="Colorado">Colorado - CO</option>
-                        <option value="Connecticut">Connecticut - CT</option>
-                        <option value="Delaware">Delaware - DE</option>
-                        <option value="Florida">Florida - FL</option>
-                        <option value="Georgia">Georgia - GA</option>
-                        <option value="Hawaii">Hawaii - HI</option>
-                        <option value="Idaho">Idaho - ID</option>
-                        <option value="Illinois">Illinois - IL</option>
-                        <option value="Indiana">Indiana - IN</option>
-                        <option value="Iowa">Iowa - IA</option>
-                        <option value="Kansas">Kansas - KS</option>
-                        <option value="Kentucky">Kentucky - KY</option>
-                        <option value="Louisiana">Louisiana - LA</option>
-                        <option value="Maine">Maine - ME</option>
-                        <option value="Maryland">Maryland - MD</option>
-                        <option value="Massachusetts">
-                          Massachusetts - MA
-                        </option>
-                        <option value="Michigan">Michigan - MI</option>
-                        <option value="Minnesota">Minnesota - MN</option>
-                        <option value="Mississippi">Mississippi - MS</option>
-                        <option value="Missouri">Missouri - MO</option>
-                        <option value="Montana">Montana - MT</option>
-                        <option value="Nebraska">Nebraska - NE</option>
-                        <option value="Nevada">Nevada - NV</option>
-                        <option value="New Hampshire">
-                          New Hampshire - NH
-                        </option>
-                        <option value="New Jersey">New Jersey - NJ</option>
-                        <option value="New Mexico">New Mexico - NM</option>
-                        <option value="New York">New York - NY</option>
-                        <option value="North Carolina">
-                          North Carolina - NC
-                        </option>
-                        <option value="North Dakota">North Dakota - ND</option>
-                        <option value="Ohio">Ohio - OH</option>
-                        <option value="Oklahoma">Oklahoma - OK</option>
-                        <option value="Oregon">Oregon - OR</option>
-                        <option value="Pennsylvania">Pennsylvania - PA</option>
-                        <option value="Rhode Island">Rhode Island - RI</option>
-                        <option value="South Carolina">
-                          South Carolina - SC
-                        </option>
-                        <option value="South Dakota">South Dakota - SD</option>
-                        <option value="Tennessee">Tennessee - TN</option>
-                        <option value="Texas">Texas - TX</option>
-                        <option value="Utah">Utah - UT</option>
-                        <option value="Vermont">Vermont - VT</option>
-                        <option value="Virginia">Virginia - VA</option>
-                        <option value="Washington">Washington - WA</option>
-                        <option value="West Virginia">
-                          West Virginia - WV
-                        </option>
-                        <option value="Wisconsin">Wisconsin - WI</option>
-                        <option value="Wyoming">Wyoming - WY</option>
-                      </select>
-                      <input type="submit" class="button alt" value="Search" />
-                    </div>
-                  </div>
-                </form>
-
-                <div class="row row-cols-1 row-cols-md-2 g-4">
-                  <div class="col">
-                    <div class="card" style="width: 18rem">
-                      <img
-                        src="https://www.thetravelmagazine.net/wp-content/uploads/World-Wonders-Tour-Image.jpg"
+                <div class="card-group d-flex justify-content-around">
+                  <div class="card">
+                    <img src="https://www.thetravelmagazine.net/wp-content/uploads/World-Wonders-Tour-Image.jpg"
                         style="width: 90%"
                         class="card-img-top"
-                        alt="..."
-                      />
+                        alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                       <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">
-                          Some quick example text to build on the card title and
-                          make up the bulk of the card's content.
-                        </p>
-                      </div>
-                      <ul class="list-group list-group-flush">
-                        <li
-                          class="list-group-item btn"
-                          data-bs-toggle="collapse"
-                          href="#multiCollapseExample1"
-                          role="button"
-                          aria-expanded="false"
-                          aria-controls="multiCollapseExample1"
-                        >
-                          An item
-                        </li>
-                        <div class="col">
-                          <div
-                            class="collapse multi-collapse"
-                            id="multiCollapseExample1"
-                          >
-                            <div class="card card-body">
-                              Some placeholder content for the first collapse
-                              component of this multi-collapse example. This
-                              panel is hidden by default but revealed when the
-                              user activates the relevant trigger.
-                            </div>
-                          </div>
-                        </div>
-                        <li
-                          class="list-group-item btn"
-                          data-bs-toggle="collapse"
-                          href="#multiCollapseExample2"
-                          role="button"
-                          aria-expanded="false"
-                          aria-controls="multiCollapseExample2"
-                        >
-                          A second item
-                        </li>
-                        <div class="col">
-                          <div
-                            class="collapse multi-collapse"
-                            id="multiCollapseExample2"
-                          >
-                            <div class="card card-body">
-                              Some placeholder content for the first collapse
-                              component of this multi-collapse example. This
-                              panel is hidden by default but revealed when the
-                              user activates the relevant trigger.
-                            </div>
-                          </div>
-                        </div>
-                        <li
-                          class="list-group-item btn"
-                          data-bs-toggle="collapse"
-                          href="#multiCollapseExample3"
-                          role="button"
-                          aria-expanded="false"
-                          aria-controls="multiCollapseExample3"
-                        >
-                          A third item
-                        </li>
-                        <div class="col">
-                          <div
-                            class="collapse multi-collapse"
-                            id="multiCollapseExample3"
-                          >
-                            <div class="card card-body">
-                              Some placeholder content for the first collapse
-                              component of this multi-collapse example. This
-                              panel is hidden by default but revealed when the
-                              user activates the relevant trigger.
-                            </div>
-                          </div>
-                        </div>
-                      </ul>
-                      <div class="card-body">
-                        <a href="#" class="card-link">Card link</a>
-                        <a href="#" class="card-link">Another link</a>
+                        <a href="#" class="card-link">Details</a>
+                        <a href="#" class="card-link">Remove</a>
                       </div>
                     </div>
                   </div>
-                  <div class="col">
-                    <div class="card" style="width: 18rem">
-                      <img
-                        src="https://www.thetravelmagazine.net/wp-content/uploads/World-Wonders-Tour-Image.jpg"
+                  <div class="card">
+                    <img src="https://www.thetravelmagazine.net/wp-content/uploads/World-Wonders-Tour-Image.jpg"
                         style="width: 90%"
                         class="card-img-top"
-                        alt="..."
-                      />
+                        alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
                       <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">
-                          Some quick example text to build on the card title and
-                          make up the bulk of the card's content.
-                        </p>
-                      </div>
-                      <ul class="list-group list-group-flush">
-                        <li
-                          class="list-group-item btn"
-                          data-bs-toggle="collapse"
-                          href="#multiCollapseExample1"
-                          role="button"
-                          aria-expanded="false"
-                          aria-controls="multiCollapseExample1"
-                        >
-                          An item
-                        </li>
-                        <li
-                          class="list-group-item btn"
-                          data-bs-toggle="collapse"
-                          href="#multiCollapseExample1"
-                          role="button"
-                          aria-expanded="false"
-                          aria-controls="multiCollapseExample1"
-                        >
-                          A second item
-                        </li>
-                        <li
-                          class="list-group-item btn"
-                          data-bs-toggle="collapse"
-                          href="#multiCollapseExample1"
-                          role="button"
-                          aria-expanded="false"
-                          aria-controls="multiCollapseExample1"
-                        >
-                          A third item
-                        </li>
-                      </ul>
-                      <div class="card-body">
-                        <a href="#" class="card-link">Card link</a>
-                        <a href="#" class="card-link">Another link</a>
+                        <a href="#" class="card-link">Details</a>
+                        <a href="#" class="card-link">Remove</a>
                       </div>
                     </div>
                   </div>
-                  <div class="col">
-                    <div class="card" style="width: 18rem">
-                      <img
-                        src="https://www.thetravelmagazine.net/wp-content/uploads/World-Wonders-Tour-Image.jpg"
+                  <div class="card">
+                    <img src="https://www.thetravelmagazine.net/wp-content/uploads/World-Wonders-Tour-Image.jpg"
                         style="width: 90%"
                         class="card-img-top"
-                        alt="..."
-                      />
+                        alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
                       <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">
-                          Some quick example text to build on the card title and
-                          make up the bulk of the card's content.
-                        </p>
-                      </div>
-                      <ul class="list-group list-group-flush">
-                        <li
-                          class="list-group-item btn"
-                          data-bs-toggle="collapse"
-                          href="#multiCollapseExample1"
-                          role="button"
-                          aria-expanded="false"
-                          aria-controls="multiCollapseExample1"
-                        >
-                          An item
-                        </li>
-                        <li
-                          class="list-group-item btn"
-                          data-bs-toggle="collapse"
-                          href="#multiCollapseExample1"
-                          role="button"
-                          aria-expanded="false"
-                          aria-controls="multiCollapseExample1"
-                        >
-                          A second item
-                        </li>
-                        <li
-                          class="list-group-item btn"
-                          data-bs-toggle="collapse"
-                          href="#multiCollapseExample1"
-                          role="button"
-                          aria-expanded="false"
-                          aria-controls="multiCollapseExample1"
-                        >
-                          A third item
-                        </li>
-                      </ul>
-                      <div class="card-body">
-                        <a href="#" class="card-link">Card link</a>
-                        <a href="#" class="card-link">Another link</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="card" style="width: 18rem">
-                      <img
-                        src="https://www.thetravelmagazine.net/wp-content/uploads/World-Wonders-Tour-Image.jpg"
-                        style="width: 90%"
-                        class="card-img-top"
-                        alt="..."
-                      />
-                      <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">
-                          Some quick example text to build on the card title and
-                          make up the bulk of the card's content.
-                        </p>
-                      </div>
-                      <ul class="list-group list-group-flush">
-                        <li
-                          class="list-group-item btn"
-                          data-bs-toggle="collapse"
-                          href="#multiCollapseExample1"
-                          role="button"
-                          aria-expanded="false"
-                          aria-controls="multiCollapseExample1"
-                        >
-                          An item
-                        </li>
-                        <li
-                          class="list-group-item btn"
-                          data-bs-toggle="collapse"
-                          href="#multiCollapseExample1"
-                          role="button"
-                          aria-expanded="false"
-                          aria-controls="multiCollapseExample1"
-                        >
-                          A second item
-                        </li>
-                        <li
-                          class="list-group-item btn"
-                          data-bs-toggle="collapse"
-                          href="#multiCollapseExample1"
-                          role="button"
-                          aria-expanded="false"
-                          aria-controls="multiCollapseExample1"
-                        >
-                          A third item
-                        </li>
-                      </ul>
-                      <div class="card-body">
-                        <a href="#" class="card-link">Card link</a>
-                        <a href="#" class="card-link">Another link</a>
+                        <a href="#" class="card-link">Details</a>
+                        <a href="#" class="card-link">Remove</a>
                       </div>
                     </div>
                   </div>
                 </div>
-                <span class="image featured"
-                  ><img
-                    src="https://www.thetravelmagazine.net/wp-content/uploads/World-Wonders-Tour-Image.jpg"
-                    style="width: 90%"
-                /></span>
-
-                <p>
-                  Phasellus quam turpis, feugiat sit amet ornare in, hendrerit
-                  in lectus. Praesent semper mod quis eget mi. Etiam eu ante
-                  risus. Aliquam erat volutpat. Aliquam luctus et mattis lectus
-                  sit amet pulvinar. Nam turpis nisi consequat etiam lorem ipsum
-                  dolor sit amet nullam.
-                </p>
-
-                <h3>Subheading</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Maecenas ac quam risus, at tempus justo. Sed dictum rutrum
-                  massa eu volutpat. Quisque vitae hendrerit sem. Pellentesque
-                  lorem felis, ultricies a bibendum id, bibendum sit amet nisl.
-                  Mauris et lorem quam. Maecenas rutrum imperdiet vulputate.
-                  Nulla quis nibh ipsum, sed egestas justo. Morbi ut ante mattis
-                  orci convallis tempor. Etiam a lacus a lacus pharetra
-                  porttitor quis accumsan odio. Sed vel euismod nisi. Etiam
-                  convallis rhoncus dui quis euismod. Maecenas lorem tellus,
-                  congue et condimentum ac, ullamcorper non sapien. Donec
-                  sagittis massa et leo semper a scelerisque metus faucibus.
-                  Morbi congue mattis mi. Phasellus sed nisl vitae risus
-                  tristique volutpat. Cras rutrum commodo luctus.
-                </p>
-
-                <p>
-                  Phasellus odio risus, faucibus et viverra vitae, eleifend ac
-                  purus. Praesent mattis, enim quis hendrerit porttitor, sapien
-                  tortor viverra magna, sit amet rhoncus nisl lacus nec arcu.
-                  Suspendisse laoreet metus ut metus imperdiet interdum aliquam
-                  justo tincidunt. Mauris dolor urna, fringilla vel malesuada
-                  ac, dignissim eu mi. Praesent mollis massa ac nulla pretium
-                  pretium. Maecenas tortor mauris, consectetur pellentesque
-                  dapibus eget, tincidunt vitae arcu. Vestibulum purus augue,
-                  tincidunt sit amet iaculis id, porta eu purus.
-                </p>
               </article>
             </div>
           </div>
@@ -574,7 +322,7 @@
                   </div>
                 </div>
                 <div class="col-8">
-                  <div class="tab-content" id="nav-tabContent">
+                  <div class="tab-content text-start" id="nav-tabContent">
                     <div
                       class="tab-pane fade show active"
                       id="list-home"
@@ -586,6 +334,10 @@
                       voluptatem ab magnam distinctio, similique eius quis,
                       minus cumque? Corrupti cupiditate corporis eius sint eum
                       quae?
+                      <div class="card-body">
+                        <a href="#" class="card-link">Details</a>
+                        <a href="#" class="card-link">Remove</a>
+                      </div>
                     </div>
                     <div
                       class="tab-pane fade"
@@ -595,6 +347,10 @@
                     >
                       similique eius quis, minus cumque? Corrupti cupiditate
                       corporis eius sint eum quae?
+                      <div class="card-body">
+                        <a href="#" class="card-link">Details</a>
+                        <a href="#" class="card-link">Remove</a>
+                      </div>
                     </div>
                     <div
                       class="tab-pane fade"
@@ -606,6 +362,10 @@
                       voluptatem ab magnam distinctio, similique eius quis,
                       minus cumque? Corrupti cupiditate corporis eius sint eum
                       quae?
+                      <div class="card-body">
+                        <a href="#" class="card-link">Details</a>
+                        <a href="#" class="card-link">Remove</a>
+                      </div>
                     </div>
                     <div
                       class="tab-pane fade"
@@ -614,47 +374,31 @@
                       aria-labelledby="list-settings-list"
                     >
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      <div class="card-body">
+                        <a href="#" class="card-link">Details</a>
+                        <a href="#" class="card-link">Remove</a>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <section class="col-3 col-6-narrower col-12-mobilep">
-            <h3>Links to Home or Job related Stuff such as cost, pay, etc</h3>
-            <ul class="links">
-              <li><a href="#">Mattis et quis rutrum</a></li>
-              <li><a href="#">Suspendisse amet varius</a></li>
-              <li><a href="#">Sed et dapibus quis</a></li>
-              <li><a href="#">Rutrum accumsan dolor</a></li>
-              <li><a href="#">Mattis rutrum accumsan</a></li>
-              <li><a href="#">Suspendisse varius nibh</a></li>
-              <li><a href="#">Sed et dapibus mattis</a></li>
-            </ul>
-          </section>
         </div>
       </div>
-    </section>
-
     <!-- Footer -->
-    <div id="footer">
-      <div class="container">
-        <div class="row">
-          <section class="col-3 col-6-narrower col-12-mobilep">
-            <h3>More Links to Stuff</h3>
-            <ul class="links">
-              <li><a href="#">Duis neque nisi dapibus</a></li>
-              <li><a href="#">Sed et dapibus quis</a></li>
-              <li><a href="#">Rutrum accumsan sed</a></li>
-              <li><a href="#">Mattis et sed accumsan</a></li>
-              <li><a href="#">Duis neque nisi sed</a></li>
-              <li><a href="#">Sed et dapibus quis</a></li>
-              <li><a href="#">Rutrum amet varius</a></li>
-            </ul>
-          </section>
-        </div>
+      <div class="container-fluid text-center">
+          <h3>More Links to Stuff</h3>
+          <ul class="row d-flex justify-content-evenly">
+            <li class="col-auto"><a href="#">Duis </a></li>
+            <li class="col-auto"><a href="#">Sed et </a></li>
+            <li class="col-auto"><a href="#">Rutrum accumsan </a></li>
+            <li class="col-auto"><a href="#">Mattis </a></li>
+            <li class="col-auto"><a href="#">Duis neque </a></li>
+            <li class="col-auto"><a href="#">dapibus quis</a></li>
+            <li class="col-auto"><a href="#">varius</a></li>
+          </ul>
       </div>
-    </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"

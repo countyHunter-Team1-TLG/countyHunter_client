@@ -19,7 +19,7 @@
       </h1>
     </div>
     <!-- Nav -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-info">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html">County Hunter</a>
         <button
@@ -97,37 +97,33 @@
     <!-- Main -->
     <section>
       <div class="container">
+          <form class="row g-4 d-flex align-items-end justify-content-start mt-3 mb-5" id="job-search">
+              <div class="col-4">
+                  <label for="inputTechnology" class="form-label">Technology</label>
+                  <input type="text" class="form-control" id="inputTechnology" placeholder="Java, Python, etc...">
+                </div>
+                <div class="col-md-2">
+                    <label for="inputCity" class="form-label">City</label>
+                    <input type="text" class="form-control" id="inputCity">
+                </div>
+                <div class="col-md-1">
+                    <label for="inputZip" class="form-label">Zip</label>
+                    <input type="text" class="form-control" id="inputZip">
+                </div>
+                <div class="col-md-1 h-50">
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </div>
+            </form>
+            <header>
+              <h2 id="job-title">Job Title</h2>
+              <p id="company">company information</p>
+            </header>
         <div class="row">
           <div class="col-7 col-12-narrower">
             <div id="content">
               <!-- Content -->
 
               <article>
-                <header>
-                  <h2 id="job-title">Job Title</h2>
-                  <p id="company">company information</p>
-                </header>
-
-                <form id="job-search">
-                  <div class="form-group">
-                    <div class="form-control col-6 col-12-mobilep">
-                      <input
-                        type="text"
-                        name="jobname"
-                        id="jobname"
-                        placeholder="Job Name"
-                      />
-                      <input
-                        type="text"
-                        name="city"
-                        id="city"
-                        placeholder="City"
-                      />
-
-                      <input type="submit" class="button alt" value="Search" />
-                    </div>
-                  </div>
-                </form>
 
                 <div class="card m-3" style="width: 100%">
                   <img
@@ -237,7 +233,7 @@
               </article>
             </div>
           </div>
-          <div class="col-5 col-12-narrower">
+          <div class="col-4 col-12-narrower mt-3 ms-4">
             <div id="sidebar">
               <!-- Sidebar -->
               <div class="row">
@@ -342,22 +338,17 @@
     </section>
 
     <!-- Footer -->
-    <div id="footer">
-      <div class="container">
-        <div class="row">
-          <section class="col-3 col-6-narrower col-12-mobilep">
-            <h3>More Links to Stuff</h3>
-            <ul class="links">
-              <li><a href="#">Duis neque nisi dapibus</a></li>
-              <li><a href="#">Sed et dapibus quis</a></li>
-              <li><a href="#">Rutrum accumsan sed</a></li>
-              <li><a href="#">Mattis et sed accumsan</a></li>
-              <li><a href="#">Duis neque nisi sed</a></li>
-              <li><a href="#">Sed et dapibus quis</a></li>
-              <li><a href="#">Rutrum amet varius</a></li>
-            </ul>
-          </section>
-        </div>
+      <div class="container-fluid text-center">
+          <h3>More Links to Stuff</h3>
+          <ul class="row d-flex justify-content-evenly">
+            <li class="col-auto"><a href="#">Duis </a></li>
+            <li class="col-auto"><a href="#">Sed et </a></li>
+            <li class="col-auto"><a href="#">Rutrum accumsan </a></li>
+            <li class="col-auto"><a href="#">Mattis </a></li>
+            <li class="col-auto"><a href="#">Duis neque </a></li>
+            <li class="col-auto"><a href="#">dapibus quis</a></li>
+            <li class="col-auto"><a href="#">varius</a></li>
+          </ul>
       </div>
     </div>
     <script src="../jobsplash.js"></script>
