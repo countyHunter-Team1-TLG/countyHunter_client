@@ -54,13 +54,3 @@ function displayFoundJobs(data) {
     document.getElementById("list-settings").innerHTML = data[4].title;
   }
 }
-function changedisplay(data) {
-  console.log("clicked");
-  //onclick change the main display
-  document.getElementById("job-title").innerHTML = data.title;
-  document.getElementById("company").innerHTML = data.company;
-  document
-    .getElementById("company-logo")
-    .setAttribute("src", data.company_logo);
-  document.getElementById("description").innerHTML = data.description;
-}
