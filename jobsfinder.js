@@ -18,34 +18,59 @@ function searchJobs(e) {
 
 //handle displaying of found jobs
 function displayFoundJobs(data) {
-  //first job
-  document.getElementById("job-title").innerHTML = data[0].title;
-  document.getElementById("company").innerHTML = data[0].company;
+  const addTo = document.getElementById("jlink-list");
+  if (data.length === 0) {
+    document.getElementById("job-title").innerHTML = "job is not found";
+    document.getElementById("company").innerHTML =
+      "job is not found theres is not company";
+    document
+      .getElementById("company-logo")
+      .setAttribute("src", "./images/countyhunters.png");
+    document.getElementById("description").innerHTML =
+      "no description avaliable ";
+
+    addTo.innerHTML = "";
+    return;
+  } else {
+    //first job
+    document.getElementById("job-title").innerHTML = data[0].title;
+    document.getElementById("company").innerHTML = data[0].company;
+    document
+      .getElementById("company-logo")
+      .setAttribute("src", data[0].company_logo);
+    document.getElementById("description").innerHTML = data[0].description;
+
+    //rest of the jobs
+
+    //create links to display jobs on the side bar
+
+    for (let i = 1; i < data.length; i++) {
+      let joblistItem = document.createElement("li");
+      let a = document.createElement("p");
+      let sameLine = document.createElement("span");
+      let liButton = document.createElement("button");
+      a.innerHTML = data[i].company + ";" + data[i].title;
+      liButton.innerHTML = "more\ninfo";
+
+      //ISSUE HERE
+      // liButton.setAttribute("onclick", function change() {
+      //   changedisplay(data[i]);
+      // });
+
+      sameLine.appendChild(liButton);
+      joblistItem.appendChild(a);
+      joblistItem.appendChild(sameLine);
+      addTo.appendChild(joblistItem);
+    }
+  }
+}
+function changedisplay(data) {
+  console.log("clicked");
+  //onclick change the main display
+  document.getElementById("job-title").innerHTML = data.title;
+  document.getElementById("company").innerHTML = data.company;
   document
     .getElementById("company-logo")
-    .setAttribute("src", data[0].company_logo);
-  document.getElementById("description").innerHTML = data[0].description;
-
-  //rest of the jobs
-  const addTo = document.getElementById("jlink-list");
-  //create links to display jobs on the side bar
-
-  for (let i = 1; i < data.length; i++) {
-    let joblistItem = document.createElement("li");
-    let a = document.createElement("a");
-    a.innerHTML = data[i].company + ";" + data[i].title;
-    a.setAttribute("onclick", () => {
-      //onclick change the main display
-      document.getElementById("job-title").innerHTML = data[i].title;
-      document.getElementById("company").innerHTML = data[i].company;
-      document
-        .getElementById("company-logo")
-        .setAttribute("src", data[i].company_logo);
-      document.getElementById("job-title").innerHTML = data[i].description;
-    });
-
-    joblistItem.appendChild(a);
-
-    addTo.appendChild(joblistItem);
-  }
+    .setAttribute("src", data.company_logo);
+  document.getElementById("description").innerHTML = data.description;
 }
