@@ -11,14 +11,81 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="../Assets/main.css">
-    <link rel="stylesheet" href="../css/about-us.css">
   </head>
   <body>
-    <header><h1>About Us</h1></header>
-    <div class="container">
-      <div class="wrapper">
-        <!--  -->
-          <h3>Software Development Engineer at Amazon (Military Apprentice)</h3>
+      <img src="../Assets/Images/Dog-CountyHunter.png" alt="" class="img-fluid" id="dog_pic">
+    <!-- Logo -->
+    <div class="bg-secondary p-5 text-center" id="jumbo">
+      <h1 class="display-4">
+        <a class="text-decoration-none text-white" href="../index.html" id="logo">County Hunter</a>
+      </h1>
+    </div>
+    <!-- Nav -->
+    <nav class="navbar navbar-expand-lg navbar-light mb-5" id="nav">
+      <div class="container-fluid">
+        <a id="logo" class="navbar-brand" href="../index.html">County Hunter</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarScroll"
+          aria-controls="navbarScroll"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul
+            class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+            style="--bs-scroll-height: 100px"
+          >
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="./Htmls/house-finder.html"
+                >House Finder</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="./job-finder.html"
+                >Job Finder</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link active dropdown-toggle"
+                href="#"
+                id="navbarScrollingDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                About Us
+              </a>
+              <ul
+                class="dropdown-menu"
+                aria-labelledby="navbarScrollingDropdown"
+              >
+                <li><a class="dropdown-item" href="./mission.html">Mission Statement</a></li>
+                <li>
+                  <a class="dropdown-item" href="./updates.html">Upcoming Improvements</a>
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="./about-us.html"
+                    >The Team</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+            <form class="col-9 d-flex justify-content-end" id="job-search">
+
+                <input type="text" class="me-2 col-2" id="inputTechnology" placeholder="Technology: Java, Python, etc...">
+
+                <input type="text" class="me-2 col-1" id="inputCity" placeholder="City">
 
                 <select id="inputState" class="me-2 col-2">
                     <option selected>State</option>
@@ -93,7 +160,7 @@
 
                <!--Xiaotian Wang info-->
               <figure class="figure d-flex">
-                <img  style="border-radius: 50%;" src="https://media-exp1.licdn.com/dms/image/C4D03AQFkDOWlAYwzSQ/profile-displayphoto-shrink_400_400/0/1570160701156?e=1625097600&v=beta&t=2ij9LX-EyCJd_qLg2mA-Uj17zJxiDu-EUMBy5-bd1FI" class="figure-img img-fluid rounded about_pic" alt="...">
+                <img src="https://media-exp1.licdn.com/dms/image/C4D03AQFkDOWlAYwzSQ/profile-displayphoto-shrink_400_400/0/1570160701156?e=1625097600&v=beta&t=2ij9LX-EyCJd_qLg2mA-Uj17zJxiDu-EUMBy5-bd1FI" class="figure-img img-fluid rounded about_pic" alt="...">
                 <figcaption id="left_profile" class="figure-caption text-end"> <h2>Xiaotian Wang</h2><h3>Software Development Engineer <br> at Amazon (Military Apprentice)</h3>
                        <p>
                             From the artificial intelligence laboratory to the U.S. Army<br />
