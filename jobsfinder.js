@@ -1,3 +1,6 @@
+var favoritemovie = "Shrek";
+localStorage.setItem("favoriteMovie", favoritemovie);
+console.log(localStorage.getItem("favoriteMovie"));
 /*
 test
 */
@@ -5,8 +8,8 @@ test
 document.getElementById("job-search").addEventListener("submit", searchJobs);
 // document.getElementById("details-00").addEventListener("click", detailsSend);
 let jobsArray;
-document.getElementById("details-00").addEventListener("click", detailsSend);
-document.getElementById("favs").addEventListener("click", addToFavorites);
+document.getElementById("details").addEventListener("click", detailsSend);
+// document.getElementById("favs").addEventListener("click", addToFavorites);
 
 // function addToFavorites() {
 //   let preference = document.getElementById("company-title-00").innerHTML;
@@ -58,30 +61,25 @@ function displayFoundJobs(data) {
     return window.alert(
       "No job results with the given technology at the specified location. Try another city"
     );
-
-    // document.getElementById("job-title").innerHTML = "job is not found";
-    // document.getElementById("company").innerHTML =
-    //   "job is not found theres is not company";
-    // document
-    //   .getElementById("company-logo")
-    //   .setAttribute("src", "./images/countyhunters.png");
-    // document.getElementById("description").innerHTML =
-    //   "no description avaliable ";
-
-    // addTo.innerHTML = "";
-    // return;
   } else {
     const container = document.querySelector("#card_container");
     container.innerHTML = "";
 
     data.forEach((element) => {
-      let createdCard = jobCard(element);
+      let createdCard = jobCard(element, data.indexOf(element));
       container.appendChild(createdCard);
     });
+
+    //add event listener to all buttons with the class card-link
+    let buttons = document.querySelectorAll(".card-link");
+    for (let i = 0; i < buttons.length; i++) {
+      let button = buttons[i];
+      button.addEventListener("click", detailsSend);
+    }
   }
 }
 
-function jobCard(jsonObject) {
+function jobCard(jsonObject, arrIndex) {
   let cardDiv = document.createElement("div");
   cardDiv.setAttribute("class", "card d-flex align-items-center");
   let { id, company_logo, title, description } = jsonObject;
@@ -95,8 +93,8 @@ function jobCard(jsonObject) {
                     <div id="00" class="card-body">
                       <h5 id="job_title" class="card-title">${title}</h5>
                       <p  id="company_description" class="card-text">${description}</p>
-                      <div class="card-body">
-                        <a href="./job-details.html" class="card-link btn" id="details">Details</a>
+                      <div class="card-body" id="jobInfoAt_${arrIndex}">
+                        <a href="./job-details.html"  class="card-link btn" >Details</a>
                         <a href="#" class="card-link btn btn-danger">Remove</a>
                       </div>
                     </div>
@@ -104,19 +102,22 @@ function jobCard(jsonObject) {
 
   return cardDiv;
 }
-function detailsSend() {
-  let company_job_description = document.getElementById("company-title-00")
-    .innerHTML;
-  // console.log(company_job_description);
-  localStorage.setItem("company_job_description", company_job_description);
-  // let company_job_description = document.getElementById("company-title-00")
-  //   .innerHTML;
-  let img_src = document.getElementById("companylogo-00").src;
-  localStorage.setItem("img_src", img_src);
 
-  let company_description = document.getElementById("company-description-00")
-    .innerHTML;
-  localStorage.setItem("company_description", company_description);
+function detailsSend(event) {
+
+
+
+
+  // let company_job_description = event.target.parent.parent.job_title;
+  // // console.log(company_job_description);
+  // localStorage.setItem("company_job_description", company_job_description);
+  // // let company_job_description = document.getElementById("company-title-00")
+  // //   .innerHTML;
+  // let img_src = event.target.company_logo;
+  // localStorage.setItem("img_src", img_src);
+
+  // let company_description = event.target.company_description;
+  // localStorage.setItem("company_description", company_description);
 
   // document.getElementById("job-title").innerHTML = company_job_description;
   // // document.getElementById("company").innerHTML = data[0].company;

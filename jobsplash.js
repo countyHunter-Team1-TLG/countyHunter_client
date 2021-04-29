@@ -1,13 +1,23 @@
+var favoritemovie = localStorage.getItem("favoriteMovie");
+console.log(favoritemovie);
+
 var company_job_description = localStorage.getItem("company_job_description");
 var img_src = localStorage.getItem("img_src");
 var company_description = localStorage.getItem("company_description");
-console.log(company_job_description);
 
-document.getElementById("job-title").innerHTML = company_job_description;
-// document.getElementById("company").innerHTML = data[0].company;
-document.getElementById("company-logo").setAttribute("src", img_src);
-document.getElementById("description").innerHTML = company_description;
-// document.getElementById("apply_btn").setAttribute("href", data[0].url);
+localStorage.clear();
+console.log(company_job_description);
+// console.log(img_src);
+// console.log(company_description);
+
+if (localStorage.length === 0) {
+} else {
+  document.getElementById("job-title").innerHTML = company_job_description;
+  // document.getElementById("company").innerHTML = data[0].company;
+  document.getElementById("company-logo").setAttribute("src", img_src);
+  document.getElementById("description").innerHTML = company_description;
+  document.getElementById("apply_btn").setAttribute("href", "#");
+}
 /*
 test
 */
