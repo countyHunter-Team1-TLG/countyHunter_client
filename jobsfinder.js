@@ -1,4 +1,5 @@
 document.getElementById("job-search").addEventListener("submit", searchJobs);
+document.getElementById("details-00").addEventListener("click", detailsSend);
 
 //handle search button click
 function searchJobs(e) {
@@ -61,8 +62,6 @@ function displayFoundJobs(data) {
     document.getElementById("company-description-02").innerHTML =
       data[2].description;
 
-    //   return;
-    // } else if (data.length === 4) {
     document.getElementById("company-title-03").innerHTML =
       data[3].company + " : " + data[3].title;
     document
@@ -71,8 +70,6 @@ function displayFoundJobs(data) {
     document.getElementById("company-description-03").innerHTML =
       data[3].description;
 
-    //   return;
-    // } else if (data.length === 5) {
     document.getElementById("company-title-04").innerHTML =
       data[4].company + " : " + data[4].title;
     document
@@ -81,10 +78,6 @@ function displayFoundJobs(data) {
     document.getElementById("company-description-04").innerHTML =
       data[4].description;
 
-    //   return;
-    // } else {
-    //   return;
-    // }
     document.getElementById("company-title-05").innerHTML =
       data[5].company + " : " + data[5].title;
     document
@@ -93,50 +86,22 @@ function displayFoundJobs(data) {
     document.getElementById("company-description-05").innerHTML =
       data[5].description;
   }
-
-  // const addTo = document.getElementById("jlink-list");
-  // if (data.length === 0) {
-  //   document.getElementById("job-title").innerHTML = "job is not found";
-  //   document.getElementById("company").innerHTML =
-  //     "job is not found theres is not company";
-  //   document
-  //     .getElementById("company-logo")
-  //     .setAttribute("src", "./images/countyhunters.png");
-  //   document.getElementById("description").innerHTML =
-  //     "no description avaliable ";
-
-  //   addTo.innerHTML = "";
-  //   return;
-  // } else {
-  //   //first job
-  //   document.getElementById("job-title").innerHTML = data[0].title;
-  //   document.getElementById("company").innerHTML = data[0].company;
-  //   document
-  //     .getElementById("company-logo")
-  //     .setAttribute("src", data[0].company_logo);
-  //   document.getElementById("description").innerHTML = data[0].description;
-
-  //   //rest of the jobs SIDE BAR
-  //   //create links to display jobs on the side bar
-
-  //   for (let i = 1; i < data.length; i++) {
-  //     let joblistItem = document.createElement("li");
-  //     let a = document.createElement("p");
-  //     let sameLine = document.createElement("span");
-  //     let liButton = document.createElement("button");
-  //     a.innerHTML = data[i].company + ";" + data[i].title;
-  //     liButton.innerHTML = "more\ninfo";
-
-  //     //ISSUE HERE
-  //     liButton.setAttribute("onclick", changedisplay);
-
-  //     sameLine.appendChild(liButton);
-  //     joblistItem.appendChild(a);
-  //     joblistItem.appendChild(sameLine);
-  //     addTo.appendChild(joblistItem);
-  //   }
-  // }
 }
+function detailsSend() {
+  let company_job_description = document.getElementById("company-title-00")
+    .innerHTML;
+  let img_src = document.getElementById("companylogo-02").src;
+  let company_description = document.getElementById("company-description-02")
+    .innerHTML;
+
+  document.getElementById("job-title").innerHTML = company_job_description;
+  // document.getElementById("company").innerHTML = data[0].company;
+  document.getElementById("company-logo").setAttribute("src", img_src);
+  document.getElementById("description").innerHTML =
+    data[0].company_description;
+  // document.getElementById("apply_btn").setAttribute("href", data[0].url);
+}
+//MAY NOT BE USED
 function changedisplay(data) {
   console.log("clicked");
   //onclick change the main display
