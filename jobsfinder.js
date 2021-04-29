@@ -87,20 +87,20 @@ function displayFoundJobs(data) {
       data[5].description;
   }
 }
-function detailsSend() {
-  let company_job_description = document.getElementById("company-title-00")
-    .innerHTML;
-  let img_src = document.getElementById("companylogo-02").src;
-  let company_description = document.getElementById("company-description-02")
-    .innerHTML;
+// function detailsSend() {
+//   let company_job_description = document.getElementById("company-title-00")
+//     .innerHTML;
+//   let img_src = document.getElementById("companylogo-02").src;
+//   let company_description = document.getElementById("company-description-02")
+//     .innerHTML;
 
-  document.getElementById("job-title").innerHTML = company_job_description;
-  // document.getElementById("company").innerHTML = data[0].company;
-  document.getElementById("company-logo").setAttribute("src", img_src);
-  document.getElementById("description").innerHTML =
-    data[0].company_description;
-  // document.getElementById("apply_btn").setAttribute("href", data[0].url);
-}
+//   document.getElementById("job-title").innerHTML = company_job_description;
+//   // document.getElementById("company").innerHTML = data[0].company;
+//   document.getElementById("company-logo").setAttribute("src", img_src);
+//   document.getElementById("description").innerHTML =
+//     data[0].company_description;
+//   // document.getElementById("apply_btn").setAttribute("href", data[0].url);
+// }
 //MAY NOT BE USED
 function changedisplay(data) {
   console.log("clicked");
