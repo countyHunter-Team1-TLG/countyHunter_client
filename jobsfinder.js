@@ -1,6 +1,28 @@
+/*
+test
+*/
+
 document.getElementById("job-search").addEventListener("submit", searchJobs);
 // document.getElementById("details-00").addEventListener("click", detailsSend);
 let jobsArray;
+document.getElementById("details-00").addEventListener("click", detailsSend);
+document.getElementById("favs").addEventListener("click", addToFavorites);
+
+// function addToFavorites() {
+//   let preference = document.getElementById("company-title-00").innerHTML;
+//   const URLPOST = `https://countyhunter.herokuapp.com/user/update-preferences`;
+//   let token = `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MTk3MjYxMjYsIm5hbWUiOiJXQU5HIiwiZW1haWwiOiJhbm90aGVyd2FuZy54YW5kZXJAZ21haWwuY29tIiwiam9iUHJlZmVyZW5jZXMiOjEsImhvdXNlUHJlZmVyYW5jZXMiOjEsImlhdCI6MTYxOTcyMjUyNn0.0dBzPCoICNKS45yc9jX4oa6PB8Q9nnZGYau0t-L1qWQ`;
+//   return fetch(URLPOST, {
+//     method: "POST",
+//     body: { jobPreferences: preference },
+//     headers: {
+//       Authorization: `auth_token ${token}`,
+//     },
+//   })
+//     .then((response) => response.json())
+//     .then((response) => console.log(response));
+// }
+
 //handle search button click
 async function searchJobs(e) {
   e.preventDefault();
@@ -58,26 +80,11 @@ function displayFoundJobs(data) {
     });
   }
 }
-// function detailsSend() {
-//   let company_job_description = document.getElementById("company-title-00")
-//     .innerHTML;
-//   let img_src = document.getElementById("companylogo-02").src;
-//   let company_description = document.getElementById("company-description-02")
-//     .innerHTML;
-
-//   document.getElementById("job-title").innerHTML = company_job_description;
-//   // document.getElementById("company").innerHTML = data[0].company;
-//   document.getElementById("company-logo").setAttribute("src", img_src);
-//   document.getElementById("description").innerHTML =
-//     data[0].company_description;
-//   // document.getElementById("apply_btn").setAttribute("href", data[0].url);
-// }
 
 function jobCard(jsonObject) {
   let cardDiv = document.createElement("div");
-    cardDiv.setAttribute("class", "card d-flex align-items-center");
-  let {id, company_logo, title, description} = jsonObject;
-
+  cardDiv.setAttribute("class", "card d-flex align-items-center");
+  let { id, company_logo, title, description } = jsonObject;
 
   cardDiv.setAttribute("id", id);
   cardDiv.innerHTML = `
@@ -96,4 +103,24 @@ function jobCard(jsonObject) {
                   </div>`;
 
   return cardDiv;
+}
+function detailsSend() {
+  let company_job_description = document.getElementById("company-title-00")
+    .innerHTML;
+  // console.log(company_job_description);
+  localStorage.setItem("company_job_description", company_job_description);
+  // let company_job_description = document.getElementById("company-title-00")
+  //   .innerHTML;
+  let img_src = document.getElementById("companylogo-00").src;
+  localStorage.setItem("img_src", img_src);
+
+  let company_description = document.getElementById("company-description-00")
+    .innerHTML;
+  localStorage.setItem("company_description", company_description);
+
+  // document.getElementById("job-title").innerHTML = company_job_description;
+  // // document.getElementById("company").innerHTML = data[0].company;
+  // document.getElementById("company-logo").setAttribute("src", img_src);
+  // document.getElementById("description").innerHTML = company_description;
+  // // document.getElementById("apply_btn").setAttribute("href", data[0].url);
 }
