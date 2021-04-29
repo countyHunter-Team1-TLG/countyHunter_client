@@ -39,7 +39,9 @@ function displayFoundJobs(data) {
       .getElementById("company-logo")
       .setAttribute("src", data[0].company_logo);
     document.getElementById("description").innerHTML = data[0].description;
-
+    document.getElementById("apply_btn").setAttribute("href", data[0].url);
+    //ISSUE USING THE URL TO DIRECTLY APPLY AS IT RETURNS AN HTML ELEMENT WITH THE LINK AND NOT JUST THE LINK
+    // how_to_apply
     if (data.length === 2) {
       //rest of the jobs SIDE BAR
       document.getElementById("list-home-list").innerHTML = data[1].company;
@@ -57,8 +59,8 @@ function displayFoundJobs(data) {
       document.getElementById("list-settings-list").innerHTML = data[4].company;
       document.getElementById("list-settings").innerHTML = data[4].title;
       return;
-    }else{
-     return;
+    } else {
+      return;
     }
   }
 }
