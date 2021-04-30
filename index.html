@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./Assets/main.css">
   </head>
   <body>
+    <img src="./Assets/Images/Dog-CountyHunter.png" alt="" class="img-fluid" id="dog_pic">
     <div class="container-fluid">
       <!-- Logo -->
       <div class="bg-secondary p-5 text-center" id="jumbo">
@@ -42,20 +43,24 @@
             >
               <li class="nav-item">
                 <a
-                  class="nav-link"
+                  class="nav-link active"
                   aria-current="page"
                   href="./Htmls/house-finder.html"
                   >House Finder</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./Htmls/job-finder.html"
+                <a class="nav-link active" href="./Htmls/job-finder.html"
                   >Job Finder</a
                 >
               </li>
+              <li class="nav-item">
+              <a class="nav-link active" href="./Htmls/favorites.html"
+                >Favorites</a
+              >
               <li class="nav-item dropdown">
                 <a
-                  class="nav-link dropdown-toggle"
+                  class="nav-link dropdown-toggle active"
                   href="#"
                   id="navbarScrollingDropdown"
                   role="button"
@@ -154,210 +159,12 @@
 
     <!-- Main -->
     <section id="main_section">
-      <!-- <img src="./Assets/Images/Dog-CountyHunter.png" alt="" class="img-fluid" id="dog_pic"> -->
-
-      <div class="container-fluid text-center mt-5">
-        
-        <header>
-          <h2>Favorites</h2>
-          <p>Keep track of your favorite jobs and houses</p>
-        </header>
-        <div class="row">
-          <div class="col-7 col-12-narrower">
-            <div id="content">
-             
-              <!-- Content -->
-              <article>
-                <div class="row row-cols-1 row-cols-md-3 g-4 d-flex justify-content-around">
-                  <div class="card">
-                    <img src="https://www.thetravelmagazine.net/wp-content/uploads/World-Wonders-Tour-Image.jpg"
-                        style="width: 90%"
-                        class="card-img-top"
-                        alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                      <div class="card-body">
-                        <a href="#" class="card-link btn" id="details">Details</a>
-                        <a href="#" class="card-link btn btn-danger">Remove</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <img src="https://www.thetravelmagazine.net/wp-content/uploads/World-Wonders-Tour-Image.jpg"
-                        style="width: 90%"
-                        class="card-img-top"
-                        alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                      <div class="card-body">
-                        <a href="#" class="card-link btn" id="details">Details</a>
-                        <a href="#" class="card-link btn btn-danger">Remove</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <img src="https://www.thetravelmagazine.net/wp-content/uploads/World-Wonders-Tour-Image.jpg"
-                        style="width: 90%"
-                        class="card-img-top"
-                        alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                      <div class="card-body">
-                        <a href="#" class="card-link btn" id="details">Details</a>
-                        <a href="#" class="card-link btn btn-danger">Remove</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="col-5 col-12-narrower">
-            <div id="sidebar">
-              <!-- Sidebar -->
-              <div class="row">
-                <div class="col-4">
-                  <div class="list-group" id="list-tab" role="tablist">
-                    <a
-                      class="list-group-item list-group-item-action active"
-                      id="list-home-list"
-                      data-bs-toggle="list"
-                      href="#list-home"
-                      role="tab"
-                      aria-controls="home"
-                      >Job 1</a
-                    >
-                    <a
-                      class="list-group-item list-group-item-action"
-                      id="list-profile-list"
-                      data-bs-toggle="list"
-                      href="#list-profile"
-                      role="tab"
-                      aria-controls="profile"
-                      >Job 2
-                    </a>
-                    <a
-                      class="list-group-item list-group-item-action"
-                      id="list-messages-list"
-                      data-bs-toggle="list"
-                      href="#list-messages"
-                      role="tab"
-                      aria-controls="messages"
-                      >Job 3</a
-                    >
-                    <a
-                      class="list-group-item list-group-item-action"
-                      id="list-settings-list"
-                      data-bs-toggle="list"
-                      href="#list-settings"
-                      role="tab"
-                      aria-controls="settings"
-                      >Job 4</a
-                    >
-                    <a
-                      class="list-group-item list-group-item-action"
-                      id="list-home-list"
-                      data-bs-toggle="list"
-                      href="#list-home"
-                      role="tab"
-                      aria-controls="home"
-                      >Job 1</a
-                    >
-                    <a
-                      class="list-group-item list-group-item-action"
-                      id="list-profile-list"
-                      data-bs-toggle="list"
-                      href="#list-profile"
-                      role="tab"
-                      aria-controls="profile"
-                      >Job 2
-                    </a>
-                    <a
-                      class="list-group-item list-group-item-action"
-                      id="list-messages-list"
-                      data-bs-toggle="list"
-                      href="#list-messages"
-                      role="tab"
-                      aria-controls="messages"
-                      >Job 3</a
-                    >
-                    <a
-                      class="list-group-item list-group-item-action"
-                      id="list-settings-list"
-                      data-bs-toggle="list"
-                      href="#list-settings"
-                      role="tab"
-                      aria-controls="settings"
-                      >Job 4</a
-                    >
-                  </div>
-                </div>
-                <div class="col-8">
-                  <div class="tab-content text-start" id="nav-tabContent">
-                    <div
-                      class="tab-pane fade show active"
-                      id="list-home"
-                      role="tabpanel"
-                      aria-labelledby="list-home-list"
-                    >
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Enim deleniti nobis blanditiis cupiditate officiis
-                      voluptatem ab magnam distinctio, similique eius quis,
-                      minus cumque? Corrupti cupiditate corporis eius sint eum
-                      quae?
-                      <div class="card-body">
-                        <a href="#" class="card-link btn" id="details">Details</a>
-                        <a href="#" class="card-link btn btn-danger">Remove</a>
-                      </div>
-                    </div>
-                    <div
-                      class="tab-pane fade"
-                      id="list-profile"
-                      role="tabpanel"
-                      aria-labelledby="list-profile-list"
-                    >
-                      similique eius quis, minus cumque? Corrupti cupiditate
-                      corporis eius sint eum quae?
-                      <div class="card-body">
-                        <a href="#" class="card-link btn" id="details">Details</a>
-                        <a href="#" class="card-link btn btn-danger">Remove</a>
-                      </div>
-                    </div>
-                    <div
-                      class="tab-pane fade"
-                      id="list-messages"
-                      role="tabpanel"
-                      aria-labelledby="list-messages-list"
-                    >
-                      Enim deleniti nobis blanditiis cupiditate officiis
-                      voluptatem ab magnam distinctio, similique eius quis,
-                      minus cumque? Corrupti cupiditate corporis eius sint eum
-                      quae?
-                      <div class="card-body">
-                        <a href="#" class="card-link btn" id="details">Details</a>
-                        <a href="#" class="card-link btn btn-danger">Remove</a>
-                      </div>
-                    </div>
-                    <div
-                      class="tab-pane fade"
-                      id="list-settings"
-                      role="tabpanel"
-                      aria-labelledby="list-settings-list"
-                    >
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      <div class="card-body">
-                        <a href="#" class="card-link btn" id="details">Details</a>
-                        <a href="#" class="card-link btn btn-danger">Remove</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+      <div class="container-fluid text-center mt-5 d-flex justify-content-evenly" id="index_container">
+        <div class="card-body mt-5">
+          <a href="#" class="card-link btn details">Search for Homes</a>
+        </div>
+        <div class="card-body mt-5">
+          <a href="#" class="card-link btn details">Search for Jobs</a>
         </div>
       </div>
     <!-- Footer -->
