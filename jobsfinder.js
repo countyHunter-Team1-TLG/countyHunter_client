@@ -1,5 +1,8 @@
+/*
+test
+*/
+
 document.getElementById("job-search").addEventListener("submit", searchJobs);
-//document.getElementById("favs").addEventListener("click", addToFavorites);
 
 let jobsArray;
 
@@ -11,10 +14,6 @@ async function searchJobs(e) {
   const cityTarget = e.target.inputCity.value;
   const stTarget = e.target.inputState.value;
   const zipTarget = e.target.inputZip.value;
-
-  //   const URLOLD = `https://jobs.github.com/positions?description=${searchJob}&location=${jobLocation}`;
-
-  // const URL = `https://countyhunter.herokuapp.com/jobs/getJobs?description=${searchJob}&location=${jobLocation}`;
 
   console.log(searchJob);
   console.log(cityTarget);
@@ -30,9 +29,6 @@ async function searchJobs(e) {
       "No job results with the given technology at the specified location. Try another city"
     );
   }
-  // if () {
-
-  // }
 }
 
 async function getJobs(searchJob, jobLocation) {
@@ -82,7 +78,7 @@ function jobCard(jsonObject, arrayIndex) {
     </div>`;
 
   cardDiv.querySelector(".details").addEventListener("click", detailsSend);
-  // cardDiv.querySelector(".fav").addEventListener("click", addToFavorites);
+
   return cardDiv;
 }
 
