@@ -1,16 +1,11 @@
-var company_job_description = localStorage.getItem("company_job_description");
-var img_src = localStorage.getItem("img_src");
-var company_description = localStorage.getItem("company_description");
-console.log(company_job_description);
+var jobObject = JSON.parse(localStorage.getItem("jobObject"));
+console.log(jobObject);
+document.getElementById("job-title").innerHTML = jobObject.title;
 
-document.getElementById("job-title").innerHTML = company_job_description;
-// document.getElementById("company").innerHTML = data[0].company;
-document.getElementById("company-logo").setAttribute("src", img_src);
-document.getElementById("description").innerHTML = company_description;
-// document.getElementById("apply_btn").setAttribute("href", data[0].url);
-/*
-test
-*/
+document
+  .getElementById("company-logo")
+  .setAttribute("src", jobObject.company_logo);
+document.getElementById("description").innerHTML = jobObject.description;
 
 document.getElementById("job-search").addEventListener("submit", searchJobs);
 

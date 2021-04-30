@@ -1,12 +1,10 @@
 /*
 test
 */
-
+let jobsArray;
 document.getElementById("job-search").addEventListener("submit", searchJobs);
 // document.getElementById("details-00").addEventListener("click", detailsSend);
-let jobsArray;
-document.getElementById("details-00").addEventListener("click", detailsSend);
-document.getElementById("favs").addEventListener("click", addToFavorites);
+//document.getElementById("favs").addEventListener("click", addToFavorites);
 
 // function addToFavorites() {
 //   let preference = document.getElementById("company-title-00").innerHTML;
@@ -58,35 +56,23 @@ function displayFoundJobs(data) {
     return window.alert(
       "No job results with the given technology at the specified location. Try another city"
     );
-
-    // document.getElementById("job-title").innerHTML = "job is not found";
-    // document.getElementById("company").innerHTML =
-    //   "job is not found theres is not company";
-    // document
-    //   .getElementById("company-logo")
-    //   .setAttribute("src", "./images/countyhunters.png");
-    // document.getElementById("description").innerHTML =
-    //   "no description avaliable ";
-
-    // addTo.innerHTML = "";
-    // return;
   } else {
     const container = document.querySelector("#card_container");
     container.innerHTML = "";
 
-    data.forEach((element) => {
-      let createdCard = jobCard(element);
+    for (let index = 0; index < data.length; index++) {
+      let createdCard = jobCard(data[index], index);
       container.appendChild(createdCard);
-    });
+    }
   }
 }
 
-function jobCard(jsonObject) {
+function jobCard(jsonObject, arrayIndex) {
   let cardDiv = document.createElement("div");
   cardDiv.setAttribute("class", "card d-flex align-items-center");
-  let { id, company_logo, title, description } = jsonObject;
+  let { company_logo, title, description } = jsonObject;
 
-  cardDiv.setAttribute("id", id);
+  cardDiv.setAttribute("id", arrayIndex);
   cardDiv.innerHTML = `
                     <img id="company_logo" src="${company_logo}"
                         style="width: 90%"
@@ -96,31 +82,18 @@ function jobCard(jsonObject) {
                       <h5 id="job_title" class="card-title">${title}</h5>
                       <p  id="company_description" class="card-text">${description}</p>
                       <div class="card-body">
-                        <a href="./job-details.html" class="card-link btn" id="details">Details</a>
+                        <a href="./job-details.html" class="card-link btn details">Details</a>
                         <a href="#" class="card-link btn btn-danger">Remove</a>
                       </div>
                     </div>
                   </div>`;
 
+  cardDiv.querySelector(".details").addEventListener("click", detailsSend);
+
   return cardDiv;
 }
-function detailsSend() {
-  let company_job_description = document.getElementById("company-title-00")
-    .innerHTML;
-  // console.log(company_job_description);
-  localStorage.setItem("company_job_description", company_job_description);
-  // let company_job_description = document.getElementById("company-title-00")
-  //   .innerHTML;
-  let img_src = document.getElementById("companylogo-00").src;
-  localStorage.setItem("img_src", img_src);
-
-  let company_description = document.getElementById("company-description-00")
-    .innerHTML;
-  localStorage.setItem("company_description", company_description);
-
-  // document.getElementById("job-title").innerHTML = company_job_description;
-  // // document.getElementById("company").innerHTML = data[0].company;
-  // document.getElementById("company-logo").setAttribute("src", img_src);
-  // document.getElementById("description").innerHTML = company_description;
-  // // document.getElementById("apply_btn").setAttribute("href", data[0].url);
+function detailsSend(event) {
+  let card = event.target.parentElement.parentElement.parentElement;
+  console.log(jobsArray[card.id], "logging object at index card.id");
+  localStorage.setItem("jobObject", JSON.stringify(jobsArray[card.id]));
 }
