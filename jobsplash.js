@@ -1,5 +1,5 @@
 var jobObject = JSON.parse(localStorage.getItem("jobObject"));
-console.log(jobObject);
+// console.log(jobObject);
 document.getElementById("job-title").innerHTML = jobObject.title;
 
 document
@@ -8,6 +8,26 @@ document
 document.getElementById("description").innerHTML = jobObject.description;
 
 document.getElementById("job-search").addEventListener("submit", searchJobs);
+document.querySelector(".fav").addEventListener("click", addToFavorites);
+
+document.getElementById("apply_btn").setAttribute("href", jobObject.url);
+
+
+//add to favorites
+function addToFavorites() {
+  let preference = document.getElementById("job-title").innerHTML;
+  const URLPOST = `https://countyhunter.herokuapp.com/user/update-preferences`;
+  let token = `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MTk3OTc2NjYsIm5hbWUiOiJXQU5HIiwiZW1haWwiOiJhbm90aGVyd2FuZy54YW5kZXJAZ21haWwuY29tIiwiam9iUHJlZmVyZW5jZXMiOjEsImhvdXNlUHJlZmVyYW5jZXMiOjEsImlhdCI6MTYxOTc5NzM2Nn0.BH87nER_Yh-CTPP6XBD5-UwgcSxX8G_s7ayAGeIdeGc`;
+  return fetch(URLPOST, {
+    method: "PUT",
+    body: { jobPreferences: preference },
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  })
+    .then((response) => response.json())
+    .then((response) => console.log(response));
+}
 
 //handle search button click
 function searchJobs(e) {

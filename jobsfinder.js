@@ -3,21 +3,6 @@ document.getElementById("job-search").addEventListener("submit", searchJobs);
 
 let jobsArray;
 
-// function addToFavorites() {
-//   let preference = document.getElementById("company-title-00").innerHTML;
-//   const URLPOST = `https://countyhunter.herokuapp.com/user/update-preferences`;
-//   let token = `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MTk3MjYxMjYsIm5hbWUiOiJXQU5HIiwiZW1haWwiOiJhbm90aGVyd2FuZy54YW5kZXJAZ21haWwuY29tIiwiam9iUHJlZmVyZW5jZXMiOjEsImhvdXNlUHJlZmVyYW5jZXMiOjEsImlhdCI6MTYxOTcyMjUyNn0.0dBzPCoICNKS45yc9jX4oa6PB8Q9nnZGYau0t-L1qWQ`;
-//   return fetch(URLPOST, {
-//     method: "POST",
-//     body: { jobPreferences: preference },
-//     headers: {
-//       Authorization: `auth_token ${token}`,
-//     },
-//   })
-//     .then((response) => response.json())
-//     .then((response) => console.log(response));
-// }
-
 //handle search button click
 async function searchJobs(e) {
   e.preventDefault();
@@ -92,10 +77,12 @@ function jobCard(jsonObject, arrayIndex) {
         <div class="card-body">
           <a href="./job-details.html" class="card-link btn col-12 details">Details</a>
         </div>
+      
       </div>
     </div>`;
 
   cardDiv.querySelector(".details").addEventListener("click", detailsSend);
+  // cardDiv.querySelector(".fav").addEventListener("click", addToFavorites);
   return cardDiv;
 }
 

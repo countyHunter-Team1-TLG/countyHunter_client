@@ -88,7 +88,11 @@ form .btn,
   color: #feffff;
   margin-right: 10px;
 }
-
+.fav {
+  background-color: #3aafa9;
+  color: #feffff;
+  margin-right: 10px;
+}
 #index_container {
   height: 100vmax;
 }
@@ -98,7 +102,8 @@ form .btn,
   height: auto;
 }
 
-.details, #details {
+.details,
+#details {
   background-color: #3aafa9;
 }
 #nav-tabContent .active {
@@ -153,4 +158,3 @@ footer li a,
   }
 }
 /* <img src="../Assets/Images/Dog-CountyHunter.png" alt="" class="img-fluid" id="dog_pic"> */
-
